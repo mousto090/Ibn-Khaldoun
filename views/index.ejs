@@ -1,11 +1,482 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Ibn Khaldoun</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/lib/css/bootstrap.css">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="/stylesheets/one-page-wonder.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+
+<body>
+  <!-- ========icons def========= -->
+  <svg xmlns="http://www.w3.org/2000/svg" id="svg-def">
+    <defs>
+      <symbol id="icon-user" viewBox="0 0 8431 10538.75" x="0px" y="0px">
+        <g>
+          <path class="fil0" d="M5443 3141c0,-677 -550,-1227 -1227,-1227 -678,0 -1227,550 -1227,1227 0,678 549,1227 1227,1227 678,0 1227,-549 1227,-1227z" />
+          <path class="fil0" d="M7197 1235c-1647,-1647 -4316,-1647 -5962,0 -1647,1646 -1647,4315 0,5962 1646,1646 4315,1646 5962,0 1646,-1647 1646,-4316 0,-5962zm-5352 5503c0,-1082 730,-2011 1749,-2288 -497,-236 -827,-739 -827,-1309 0,-800 649,-1449 1449,-1449 800,0 1449,649 1449,1449 0,569 -330,1072 -826,1309 1023,275 1735,1203 1747,2287l-221 2c-14,-1190 -950,-2149 -2149,-2149 -1187,0 -2148,962 -2148,2148l-223 0z" />
+        </g>
+      </symbol>
+      <symbol id="icon-phd-student" viewBox="0 0 100 125" x="0px" y="0px">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M59.8514214,67.3369141  C79.1420135,70.0997772,84.1495361,81.4344864,84.1495361,95H15.8504677c0-13.5655136,5.0073776-24.9004364,24.298111-27.6630859  c2.1505661,3.4740982,5.3069229,5.5292435,9.8515968,5.5292435C54.5447121,72.8661575,57.7010651,70.8110123,59.8514214,67.3369141z  " />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M65.4641418,29.0308895  c3.484642,3.7601528,5.6156693,8.7926159,5.6156693,14.3234081c0,11.6420479-9.4377251,21.0797768-21.0797768,21.0797768  s-21.0797787-9.4377289-21.0797787-21.0797768c0-5.5307922,2.1309624-10.5632553,5.6156712-14.3234081  c4.4819298,0.5776577,9.7824554,0.9116325,15.4641075,0.9116325C55.6816177,29.942522,60.9821434,29.6085472,65.4641418,29.0308895z  " />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M65.4661102,21.2390041v5.1389866  c-4.4823494,0.5776577-9.7837219,0.9118423-15.4660759,0.9118423c-5.6824226,0-10.9835854-0.3341846-15.4659348-0.9118423  v-5.1389866l10.7981529,2.497118c3.2167168,0.7439079,6.1187782,0.7439079,9.335495,0L65.4661102,21.2390041z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2780094,12.5083618l30.0542431-6.9503779  c3.2167168-0.7439785,6.1187782-0.7439785,9.335495,0l30.054245,6.9503779  c0.4579239,0.1059608,0.772995,0.5021219,0.772995,0.9722023c0,0.4700108-0.3150711,0.8662415-0.772995,0.9722033  l-6.2120209,1.4366617v12.4073181l3.3470535,5.797102c0.4654465,0.8039131,0.1912003,1.8334541-0.6127167,2.2988968  c-0.8038483,0.4655113-1.8334579,0.1912651-2.2988968-0.6126518l-0.4354401-0.754097v0.8694038  c0,0.9313774-0.7550812,1.6864586-1.6864624,1.6864586c-0.9313049,0-1.6864548-0.7550812-1.6864548-1.6864586v-0.8698235  l-0.4353714,0.754097c-0.4655151,0.8039131-1.4950485,1.0781631-2.2989655,0.6127205  c-0.8038483-0.4655151-1.0781631-1.4950523-0.6126556-2.2989693l3.3469925-5.7971001V16.669384l-20.4693069,4.7337608  c-3.2167168,0.7439079-6.1187782,0.7439079-9.335495,0l-30.0542431-6.9503775  c-0.4579248-0.1059618-0.7729988-0.5021925-0.7729988-0.9722033C14.5050106,13.0104837,14.8198738,12.6143227,15.2780094,12.5083618  z" />
+      </symbol>
+    </defs>
+  </svg>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ibn Khaldoun</a>
+      <!-- <a href="" class="navbar-brand"><img src="/images/logo.png" alt="Logo"></a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#projet">Projet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Equipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#partner">Partenaires</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">Programme Ibn Khaldoun</h1>
+        <h2 class="masthead-subheading mb-0">
+          Les relations diplomatiques entre le Maroc et l’Amérique Latine
+        </h2>
+        <!-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> -->
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <section id="sections">
+    <section id="projet">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="row-inner">
+            <div class="section-title p-3">
+              <h2 class="display-4">Projet</h2>
+            </div>
+            <h2 class="display-5">Présentation</h2>
+            <p>
+              Le présent projet vise à réaliser une étude des relations diplomatiques entre le Maroc et les pays
+              d’Amérique Latine, dans ses dimensions politiques, économiques et culturelles, depuis l’intronisation du
+              Roi Mohammed VI jusqu’aujourd’hui (1999-2018). Ce projet de recherche permettra de faire un bilan de ce
+              qui
+              a été réalisé durant ces vingt dernières années, de faire une évaluation des atouts et des insuffisances
+              de
+              la diplomatie marocaine dans ses relations tant sur le plan bilatéral, avec chacun des pays hispaniques
+              et
+              lusophones du continent latino-américain, qu’au sein d’organisations régionales (Amérique du Sud,
+              Amérique
+              Centrale, Caraïbes).
+            </p>
+            <h2 class="display-5">Objectifs</h2>
+            <ul>
+              <li>
+                L’examen de la présence et du rôle la diplomatie parallèle (partis politiques, acteurs académiques et
+                associatifs, diaspora marocaine) dans le renforcement des liens entre les deux rives de l’Atlantique
+                qui
+                font face à des défis communs.
+              </li>
+              <li>
+                Examiner et évaluer certains aspects pertinents, notamment l’importance d’élargir le spectre de la
+                coopération entre le Maroc et les pays d’Amérique du Sud à des dimensions structurantes, dont la
+                coopération académique, les questions de développement humain et les échanges culturels et humains.
+              </li>
+              <li>
+                Du point de vue stratégique, il est temps de se poser la question si l’offensive de la diplomatie
+                marocaine des deux dernières décennies a réussi, ou non, à défendre l’intégrité territoriale, à
+                neutraliser les réseaux d’appuis historiques aux thèses séparatistes de Polisario
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="row-inner">
+            <div class="section-title p-3">
+              <h2 class="display-4">Equipe</h2>
+            </div>
+            <!-- <h2 class="display-5 p-3">Membres de la structure impliqués dans le présent projet</h2> -->
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="display-5 p-3">Coordonnateur</h2>
+        </div>
+        <div class="row row-team-members cordinator">
+          <!-- Team member cordinator -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-user">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Pr. Abdelmouneim BOUNOU</h4>
+                <p class="card-text">Faculté des Lettres et des Sciences Humaines Université Mohammed V de Rabat</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member cordinator-->
+        </div>
+        <div class="row">
+          <h2 class="display-5 p-3">Membres de la structure impliqués dans le présent projet</h2>
+        </div>
+        <div class="row row-team-members">
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-user">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Bounou Abdelmouneim</h4>
+                <p class="card-text">Lettres Ibériques et Ibéro-américaines</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-user">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Benayad Nohma</h4>
+                <p class="card-text">Lettres Ibériques et Ibéro-américaines</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-user">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Ouzir Mustapha</h4>
+                <p class="card-text">Sociolinguistique</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-user">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Barouki Abdelali</h4>
+                <p class="card-text">Relations maroco-hispaniques</p>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+        </div>
+
+        <div class="row align-items-center">
+          <div class="p-3">
+            <h2 class="display-5">Doctorants</h2>
+          </div>
+        </div>
+
+        <div class="row row-phd-students">
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-phd-student">
+                    <use xlink:href="#icon-phd-student"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Maroua Chemali</h4>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-phd-student">
+                    <use xlink:href="#icon-phd-student"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Gloria Young</h4>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-phd-student">
+                    <use xlink:href="#icon-phd-student"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Maisaa El Batane</h4>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <p>
+                  <svg class="icon icon-phd-student">
+                    <use xlink:href="#icon-phd-student"></use>
+                  </svg>
+                </p>
+                <h4 class="card-title">Nora Hamdaoui</h4>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+
+        </div>
+
+      </div>
+    </section>
+    <section id="partner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="row-inner">
+            <div class="section-title p-3">
+              <h2 class="display-4">Partenaires</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-partner">
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Laboratoire des études et recherches juridiques et politiques</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>FSJES de soussi</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Mohammed V Rabat</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Bouzouita Samir</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"> Laboratoire Patrimoine: Etude, Préservation et Sauvegarde</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>FLSHS/ Fès</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>USMBA</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Bouzouita Samir</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Al Marssad</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Parlement</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Mounjid Mouhcine</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Centro de Línguas, Literaturas e Culturas (CLLC)</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Dep. de Línguas e Culturas</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Universidade de Aveiro</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Abdelilah Suisse</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Programa de pós Graduação em Direito/Direitos Emergentes na Soceidade Global</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Faculté de Droit</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Universdiade Federal de Santa Maria, Brasil</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Mohammed Nadir</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Scanner International</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Université de Playa Ancha, Valparaíso- Chili</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Université de Playa Ancha, Valparaíso- Chili</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>André Grimblatt</div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Escuela de Relaciones Internacionales</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Escuela de Relaciones Internacionales</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Universidad de Panamá</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Euclides Tapia Gloria Young </div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Partner -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Instituto de Justicia y derechos humanos</h4>
+                <p>
+                  <div class="title"><strong>Etablissement</strong></div>
+                  <div>Universidad Nacional de Lanús</div>
+                  <div class="title"><strong>Université</strong></div>
+                  <div>Universidad Nacional de Lanús</div>
+                  <div class="title"><strong>Participant</strong></div>
+                  <div>Jaramillo Ana Adriana Arce </div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Ibn Khaldoun 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/lib/jquery.min.js"></script>
+  <script src="/lib/js/bootstrap.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
 </html>

@@ -1,8 +1,117 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+#svg-def {
+  display: none !important;
+}
+
+.active {
+  background: #ff6a00;
+  color: #FFF;
+}
+
+#sections section {
+  padding-top: 4rem;
+}
+
+#sections section:nth-child(odd) {
+  /* background-color: #ececec; */
+  background-color: #f8f9fb;
+}
+
+#sections section:nth-child(even) {
+  background-color: #FFF
+}
+
+section .section-title {
+  position: relative;
+  text-align: center;
+}
+
+.section-title h2:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  content: '';
+  background: #ff6a00;
+}
+
+.row-inner {
+  width: 100%
+}
+
+li {
+  list-style: none
+}
+
+#projet li {
+  list-style: inherit;
+}
+
+p,
+li {
+  font-size: 16px;
+  line-height: 1.6
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+.row-team-members .card {
+  border-color: #ff6a00;
+}
+
+.row-team-members .card .card-title {
+  color: #ff6a00
+}
+
+.row-team-members svg use {
+  fill: #ff6a00;
+}
+
+
+.row-phd-students .card {
+  border-color: #ee0979
+}
+
+.row-phd-students .card .card-title {
+  color: #ee0979
+}
+
+.row-phd-students svg use {
+  fill: #ee0979;
+}
+
+
+.row-partner>div {
+  display: flex;
+}
+
+.row-partner .card {
+  min-height: 290px;
+  flex-grow: 1;
+  border-color: #ff6a00;
+}
+
+.row-partner .card-title {
+  color: #E04E39
+}
+
+.row-partner .card .title {
+  color: #E04E39;
+  padding-top: .5rem;
+}
+
+footer {
+  margin-top: 2rem;
 }
