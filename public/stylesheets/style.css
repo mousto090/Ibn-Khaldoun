@@ -6,6 +6,9 @@ body {
   display: none !important;
 }
 
+svg {
+    max-width: 120px;
+}
 .active {
   background: #ff6a00;
   color: #FFF;
